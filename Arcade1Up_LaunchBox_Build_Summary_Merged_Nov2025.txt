@@ -1,0 +1,121 @@
+# 🕹️ LaunchBox / Arcade1Up Conversion Build Summary
+
+## ✅ Parts You Already Have
+- **Arcade1Up NBA Jam cabinet** (broken PCB, intact screen and shell)  
+- **ASUS ROG Zephyrus G14** (Ryzen 9 8945HS / RTX 4060 / 16 GB LPDDR5X / 1 TB SSD)  
+- **HyperDrive Next 6-Port USB-C Hub** (main dock)  
+- **WD Black P10 4 TB external drive** – ROMs + BIOS + artwork storage  
+- **Arcade1Up 12 V power brick** (likely functional)  
+- **BOE DV170YGZ-N10 17″ 4:3 LCD panel** (intact)  
+- **Stock Arcade1Up speakers** (reusable)  
+- Possibly reuse original joysticks/buttons  
+- **Lifetime LaunchBox + BigBox + EmuMovies licenses**
+
+---
+
+## 🧩 Parts You Still Need
+| Part | Purpose | Est. Price |
+|------|----------|-----------:|
+| HDMI → LVDS controller board (for DV170YGZ-N10, 1280×1024) | Connect laptop → LCD | $25–30 |
+| Dual USB encoder kit (Zero Delay / Xin-Mo) | Interface for 2-player controls | $15–25 |
+| 12 V mini stereo amplifier (TPA3116 / PAM8610) | Drive speakers | $8–15 |
+| **New 2.0 or 2.1 speakers** (arcade-ready) | Audio upgrade if stock is weak | $20–40 |
+| Sanwa-style 2-player joystick + 8-button kit (30 mm) | Main controls | ≈ $40 |
+| 24 mm buttons (Start / Select / Menu) | Admin controls | ≈ $10 |
+| 12 V DC splitter / adapter cable | Power amp + display | $5 |
+| **Controller hooks or mounts** | Hang gamepads when not in use | $10–20 |
+| **Keyboard / mouse tray or slot** | Easy access for setup | $20–30 |
+| (Optional) 17–19″ 4:3 HDMI monitor | Simplified swap if LVDS fails | $80–120 |
+| (Optional) Custom vinyl artwork | Cabinet refresh | $30–60 |
+
+---
+
+## 💻 System Configuration (2025-11 Baseline)
+
+### 🧠 Main System
+- **Laptop:** ASUS ROG Zephyrus G14 (Ryzen 9 8945HS / RTX 4060 / 16 GB LPDDR5X / 1 TB SSD)  
+- **OS:** Windows 11  
+- **Frontend:** LaunchBox + BigBox  
+- **Emulators:** RetroArch, RPCS3, Yuzu, Ryujinx, Dolphin, PCSX2, Cemu, Citra etc.  
+- **External Storage:** WD Black P10 4 TB (ROMs + BIOS + assets)  
+- **Display:** Arcade1Up 17″ LCD via HDMI → LVDS controller  
+- **Audio:** 12 V amp → Arcade1Up speakers  
+- **Power:** Laptop barrel charger + 12 V splitter for amp/display  
+
+### 🔌 Docking & Connectivity
+- **Dock:** HyperDrive Next 6-Port USB-C Hub  
+  - HDMI (4 K @ 30 Hz) → LVDS display  
+  - 2 × USB-A 3.2 → encoders / amp  
+  - USB-C PD input (unused)  
+  - SD / microSD (optional storage)  
+- **Connection:** Single USB-C plug from G14 → hub for arcade mode  
+- **Portability:** Laptop unplugs cleanly; dock stays mounted  
+- **Future-proof:** Hub works with future mini-PC upgrade (USB-C 3.2)
+
+---
+
+## 🎮 Control Layout (2-Player / 8-Button)
+Each player has 1 joystick + 8 main buttons (30 mm) + Start/Select (24 mm).  
+Admin buttons: Pause/Menu, Coin/Credit, Exit, optional hidden Shutdown.  
+Button spacing ~1.25″; joystick ≈ 3.5–4″ from first button column.  
+
+---
+
+## 🧱 Mounting & Ventilation
+
+### Laptop
+- Mounted on rear slide-out tray or shelf behind cab for quick removal  
+- Keep ≥ 2–3″ air gap around vents; do not enclose fully  
+- Use Velcro straps or rubber pads to prevent sliding  
+- Power brick plugs into strip inside cab (via surge protector)  
+- Cable pass-through with rubber grommet for USB-C and HDMI  
+
+### Dock
+- Mount with Velcro / 3 M Command strips to side panel inside cab  
+- Short HDMI + USB leads run to display and encoders  
+- Use adhesive cable clips or spiral wrap for neat routing  
+- Add small USB fan if interior temps rise > 35 °C  
+
+### Power / Safety
+- Laptop on own charger; amp and display share 12 V brick  
+- Inline fuse or surge module recommended on 12 V line  
+- Optional rear kill-switch for entire cabinet  
+
+---
+
+## ⚙️ Software Setup
+- **LaunchBox + BigBox:** `E:\LaunchBox\`  
+- **RetroArch:** `E:\LaunchBox\Emulators\RetroArch\`  
+- **ROMs:** `E:\Emulation\Games\<Platform>\`  
+- **BIOS:** `E:\Emulation\BIOS\`  
+- **Storage Drive:** WD Black P10 ( E:  NTFS )  
+- **Licenses:** Lifetime LaunchBox / BigBox / EmuMovies active  
+
+---
+
+## 🛒 Next Steps – Purchase Order & Setup Sequence
+1. **Buy LVDS controller board** (for BOE DV170YGZ-N10 panel).  
+2. **Buy dual USB encoder kit** for two-player setup.  
+3. **Buy 12 V stereo amp + splitter cable** for audio.  
+4. **Buy joystick + button kit (30 mm/24 mm)** and wire to encoders.  
+5. (Optional) Buy controller hooks / keyboard slot / vinyl art as final touches.  
+6. Install dock inside cab → connect HDMI + USB runs → test display and controls.  
+7. Tune LaunchBox and BigBox startup behavior; set to auto-launch on boot.  
+
+---
+
+## 💡 Ideas & Future Mods
+- **Audio / Visual:** Upgrade to 2.1 speakers, lighted marquee, LEDBlinky integration.  
+- **Controls:** Trackball or spinner module for special titles.  
+- **Functionality:** Power button mod for arcade toggle, front USB service port.  
+- **Cooling:** Add vent fan (40–60 mm USB / 12 V).  
+- **Aesthetic:** New T-molding / custom artwork / acrylic bezel.  
+- **Future PC Upgrade:** NUC / mini-ITX Ryzen 5 or i5 for dedicated build later.  
+
+---
+
+## ✅ Status (2025-11)
+- ✅ Laptop selected — ASUS ROG Zephyrus G14  
+- ✅ Dock purchased — HyperDrive Next 6-Port USB-C Hub  
+- 🛒 Next step — order core parts (controller board, encoders, amp, buttons)  
+- 🔜 Integrate dock and test full cabinet wiring and software flow  
