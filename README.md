@@ -1,79 +1,174 @@
-# Arcade1Up LaunchBox Conversion Project
+# 🕹️ LaunchBox / Arcade1Up Conversion – High-Level Overview  
+### NBA Jam (Wave 3) 4-Player → 2-Player Conversion
 
-This project converts an old **Arcade1Up NBA Jam** cabinet into a modern emulation arcade powered by **LaunchBox** and **BigBox**. The goal is to reuse the existing cabinet and display while integrating a full Windows-based gaming system that can easily switch between arcade and desktop use.
+This project converts an **Arcade1Up NBA Jam 4-player Wave-3 cabinet** into a **2-player** LaunchBox/BigBox multicade powered by a **Windows laptop**.  
+This README stays **high-level** and focuses on **structure and design**, not individual SKUs or prices.
 
----
-
-## Project Overview
-
-The cabinet originally had a broken PCB, but the monitor and body were still in good shape. Instead of repairing the stock hardware, the project replaces it with a compact gaming computer setup using an **ASUS ROG Zephyrus G14** laptop as the main system. The laptop connects to a dock inside the cabinet via USB-C, which handles video output, audio, and control inputs. When connected, the cabinet behaves like a dedicated arcade; when unplugged, the laptop remains fully portable.
-
-The system runs **LaunchBox** and **BigBox** for a console-like front end that launches emulators such as RetroArch, Dolphin, PCSX2, Yuzu, and more. All ROMs, BIOS files, and artwork are stored on an external 4TB WD Black drive.
+For detailed part numbers, vendors, and pricing, use the dedicated **BOM / build summary** document instead.
 
 ---
 
-## Current Hardware Setup
+## 1. Project Structure
 
-- **Cabinet:** Arcade1Up NBA Jam (reused monitor, speakers, cabinet shell)
-- **Computer:** ASUS ROG Zephyrus G14 (Ryzen 9 8945HS / RTX 4060 / 16 GB RAM / 1 TB SSD)
-- **Dock:** HyperDrive Next 6-Port USB-C Hub
-- **Storage:** WD Black P10 4TB external HDD
-- **Display:** BOE 17” 4:3 LCD connected via HDMI to LVDS controller
-- **Audio:** Original Arcade1Up speakers powered by a 12V mini amplifier
-- **Frontend:** LaunchBox + BigBox (lifetime license)
+- **Cabinet Base:**  
+  - Arcade1Up NBA Jam (Wave 3, originally 4-player)  
+  - Converted to a **2-player, 8-button-per-side** layout
 
----
+- **Brain of the System:**  
+  - Laptop (inside or outside cabinet) as the main PC  
+  - Single USB-C dock for video + controls + audio
 
-## Remaining Parts to Purchase
-
-- HDMI to LVDS controller board (for the existing LCD)
-- Dual USB encoder kit for two-player controls
-- Sanwa-style joystick and button kits
-- Small 12V stereo amplifier and splitter cable
-- Mounts for controllers and space for a keyboard/mouse
-- Optional upgrades: better speakers, cooling fans, and new artwork
+- **Frontend & Software:**  
+  - Windows 11  
+  - LaunchBox + BigBox  
+  - RetroArch plus selected standalone emulators  
 
 ---
 
-## System Configuration
+## 2. Hardware Overview
 
-- **Operating System:** Windows 11
-- **Frontend:** LaunchBox + BigBox
-- **Storage Layout:**  
-  - E:\LaunchBox → Frontend installation  
-  - E:\Emulation\Games → ROMs  
-  - E:\Emulation\BIOS → BIOS files  
+### 2.1 Existing / Core Hardware
+- Arcade1Up cabinet with stock LCD  
+- ASUS ROG Zephyrus G14 laptop  
+- USB-C dock/hub  
+- External HDD for ROMs/BIOS/media  
+- Lifetime LaunchBox + BigBox + EmuMovies licenses
 
----
+### 2.2 Control System
+- 2-player joystick + button setup  
+- Dual USB encoders  
+- Admin buttons: Start / Select / Coin / Exit  
+- Wave-3 compatible 2-player deck with plexi top
 
-## Planned Layout
+### 2.3 Video & Audio
+- LVDS → HDMI controller for stock monitor  
+- USB/amp-powered speakers or soundbar  
+- Noise isolator if needed
 
-Each player will have a joystick and eight buttons, plus smaller Start and Select buttons. There will also be a few admin buttons for pause, menu, coin, and exit functions. The laptop and dock are mounted behind the monitor with proper ventilation and quick disconnect options for maintenance.
-
----
-
-## Build Progress (as of November 2025)
-
-- ✅ Cabinet shell and monitor available  
-- ✅ Laptop and USB-C dock selected  
-- 🛒 Next: Order encoder, buttons, amp, and controller board  
-- 🔜 Assemble and wire the cabinet, then configure BigBox for arcade mode  
-
----
-
-## Future Plans
-
-Once the cabinet is functional, optional upgrades may include:
-- LED button lighting (via LEDBlinky)
-- Trackball or spinner support
-- Improved 2.1 audio system
-- Custom vinyl graphics or new T-molding
-- Small form-factor PC for a dedicated system later on
+### 2.4 Power & I/O
+- Internal power strip  
+- 12 V brick reused for monitor and/or amp  
+- Panel-mount USB extensions for easy access
 
 ---
 
-## About
+## 3. High-Level System Architecture
 
-**Start Date:** November 2025  
-**Goal:** Fully functional modern arcade cabinet running LaunchBox / BigBox with clean cable management, full two-player setup, and minimal footprint.
+### 3.1 Data & Compute
+- **Laptop** runs OS, LaunchBox, and emulators  
+- **External drive** stores:
+  - `LaunchBox`  
+  - `Emulation\\BIOS`  
+  - `Emulation\\Games\\<Platform>`  
 
+### 3.2 Video Path
+Laptop HDMI → USB-C dock → LVDS controller → Stock LCD
+
+### 3.3 Audio Path
+Laptop 3.5 mm → (optional isolator) → speakers/soundbar  
+Powered via USB or internal strip
+
+### 3.4 Controls Path
+Control deck → dual USB encoders → dock → laptop  
+Optional wireless controllers via USB dongle
+
+### 3.5 External I/O
+Panel-mount USB ports → dock/encoders  
+Allows connection of controllers, keyboard/mouse, USB sticks
+
+---
+
+## 4. Cabinet Layout & Mounting (Conceptual)
+
+### 4.1 Control Deck
+- 8 main buttons per player  
+- Joysticks mirrored  
+- Admin button row  
+- Cleanly routed wiring  
+
+### 4.2 Internal Layout
+- LVDS controller near monitor  
+- Dock on a side panel  
+- Power strip on cabinet floor  
+- Cable management with clips/zip ties  
+
+### 4.3 Laptop Placement (Options)
+- Mounted inside on shelf or tray  
+- OR outside with a simple 3-cable “umbilical”  
+- Easy to disconnect and use independently  
+
+---
+
+## 🧱 Mounting & Ventilation
+
+### Laptop
+- Rear shelf or slide-out tray  
+- 2–3″ ventilation gap  
+- Velcro straps or rubber pads  
+- Power brick on internal strip  
+- Cable pass-through with grommets  
+
+### Dock
+- Mounted with Velcro/3M strips  
+- Short HDMI + USB lines  
+- Cable clips for clean routing  
+- Optional small USB fan if cabinet exceeds ~35 °C  
+
+### Power
+- Laptop charger runs separately  
+- Amp + display can share 12 V brick via splitter  
+- Inline fuse or rear kill-switch recommended  
+
+---
+
+## 5. Software Layout & Behavior
+
+### 5.1 Directory Layout
+```
+E:\\LaunchBox\\
+ ├─ Emulators\\
+ │   └─ RetroArch\\
+ ├─ Emulation\\
+ │   ├─ BIOS\\
+ │   └─ Games\\<Platform>\\
+```
+
+### 5.2 Frontend Behavior
+- BigBox boots directly into arcade mode  
+- Arcade-optimized theme  
+- Unified input mapping across all platforms  
+- Admin buttons mapped to Pause / Menu / Exit  
+
+### 5.3 Input Mapping
+- Standardized 8-button layout for fighters  
+- Consistent Start/Select per system  
+- Admin buttons mapped globally  
+
+---
+
+## ⚙️ Software Setup Summary
+- Install LaunchBox + BigBox on external drive  
+- Configure RetroArch and standalone emulators  
+- Map controls to match physical deck  
+- Configure BigBox for auto-launch  
+
+---
+
+## 📂 Repository Structure
+```
+/docs               → diagrams, mounting plans  
+/hardware           → specs, wiring notes, BOM  
+/software           → configs, emulator presets  
+/assets             → marquee, artwork, theme files  
+PROJECT_OVERVIEW.md → this document  
+```
+
+---
+
+## 6. Build Phases (High Level)
+
+1. **Control Deck Prep** – Install controls, wire to encoders  
+2. **Video & Audio** – Install LVDS board and speakers  
+3. **Internal Wiring** – Mount dock, power strip, and route cables  
+4. **Software Setup** – Configure LaunchBox/BigBox, map controls  
+5. **Polish** – Cable management, optional artwork/cooling  
