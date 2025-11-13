@@ -23,7 +23,20 @@
 
 ---
 
-# 🛠️ Parts Purchased (Final)
+## 🧩 Parts You Still Need
+| Part | Purpose | Est. Price |
+|------|----------|-----------:|
+| 12 V mini stereo amplifier (TPA3116 / PAM8610) | Drive speakers | $8–15 |
+| **New 2.0 or 2.1 speakers** (arcade-ready) | Audio upgrade if stock is weak | $20–40 |
+| 12 V DC splitter / adapter cable | Power amp + display | $5 |
+| **Controller hooks or mounts** | Hang gamepads when not in use | $10–20 |
+| **Keyboard / mouse tray or slot** | Easy access for setup | $20–30 |
+| (Optional) 17–19″ 4:3 HDMI monitor | Simplified swap if LVDS fails | $80–120 |
+| (Optional) Custom vinyl artwork | Cabinet refresh | $30–60 |
+
+---
+
+# 🛠️ Parts Purchased
 
 ## 🎮 Controls
 ### From ShowtimeArcadeMods
@@ -101,7 +114,28 @@ These are standard and cheap — you probably have them already:
 
 ---
 
-# 🧠 System Configuration
+# 🧠 Main System
+- **Laptop:** ASUS ROG Zephyrus G14 (Ryzen 9 8945HS / RTX 4060 / 16 GB LPDDR5X / 1 TB SSD)  
+- **OS:** Windows 11  
+- **Frontend:** LaunchBox + BigBox  
+- **Emulators:** RetroArch, RPCS3, Yuzu, Ryujinx, Dolphin, PCSX2, Cemu, Citra etc.  
+- **External Storage:** WD Black P10 4 TB (ROMs + BIOS + assets)  
+- **Display:** Arcade1Up 17″ LCD via HDMI → LVDS controller  
+- **Audio:** 12 V amp → Arcade1Up speakers  
+- **Power:** Laptop barrel charger + 12 V splitter for amp/display  
+
+### 🔌 Docking & Connectivity
+- **Dock:** HyperDrive Next 6-Port USB-C Hub  
+  - HDMI (4 K @ 30 Hz) → LVDS display  
+  - 2 × USB-A 3.2 → encoders / amp  
+  - USB-C PD input (unused)  
+  - SD / microSD (optional storage)  
+- **Connection:** Single USB-C plug from G14 → hub for arcade mode  
+- **Portability:** Laptop unplugs cleanly; dock stays mounted  
+- **Future-proof:** Hub works with future mini-PC upgrade (USB-C 3.2)
+
+
+## 🧠 System Configuration
 
 ### Laptop
 - Windows 11  
@@ -122,6 +156,9 @@ Sound bar USB → Laptop or hub
 ### External USB
 Dual USB panel-mount → Connected internally to encoders or hub
 
+### Controllers
+2x PS3 wireless battery powered controllers plus dongle
+
 ---
 
 # 🧱 Mounting & Layout
@@ -138,9 +175,10 @@ Dual USB panel-mount → Connected internally to encoders or hub
 ### Sound Bar
 - Option A: Under control deck  
 - Option B: Behind speaker grill  
+- Option C: Sitting on top of cabinet
 
 ### Laptop
-- Mounted externally on a small side table or shelf  
+- Mounted externally on a small side table or shelf, Velcro?
 - Simple “umbilical”:  
   - HDMI  
   - USB  
@@ -151,7 +189,7 @@ Dual USB panel-mount → Connected internally to encoders or hub
 - Installed on cabinet floor  
 - Powers:  
   - LCD board (12 V)  
-  - Laptop charger  
+  - Laptop charger?
   - Sound bar (if powered from internal USB adapter)
 
 ---
@@ -190,13 +228,19 @@ Dual USB panel-mount → Connected internally to encoders or hub
 ---
 
 # 🧭 Future Mods (Optional)
-- Custom vinyl deck artwork  
-- Side art refresh  
-- LED halo rings (30 mm)  
+- Custom vinyl deck artwork
+- Side art refresh
+- LED halo rings around buttons (30 mm)  
 - Lighted marquee  
 - Mini-PC internal conversion  
 - USB fan for cooling  
-- Rear I/O grommets  
+- Rear I/O grommets
+- Internal embedded speakers and amp
+- Real Sanwa buttons / joystick
+- Trays for controllers and accessories
+- Keyboard / Mouse tray
+- Front control deck buttons
+- Ventilation slots and mounted fans
 
 ---
 
