@@ -1,253 +1,176 @@
 # 🕹️ LaunchBox / Arcade1Up Conversion Build Summary  
 ### NBA Jam (Model 7754) → 2-Player Conversion (Wave 3)  
-*(Updated with all purchased parts — November 2025)*
+*(ROG Ally Z2 “Xbox Edition” as main system — Updated Nov 2025)*
 
 ---
 
 ## ✅ Parts You Already Have
 - **Arcade1Up NBA Jam cabinet (Model 7754)**  
-  - 4-player Wave-3 style cab  
+  - Wave-3 4-player shell  
   - **BOE DV170YGZ-N10 17″ 4:3 LCD panel**  
-  - Stock speakers (currently unused)  
-  - Stock 12 V Arcade1Up power brick (reused)
+  - Stock speakers (optional to reuse)  
+  - Stock 12 V Arcade1Up power brick  
 
-- **ASUS ROG Zephyrus G14**  
-  - Ryzen 9 8945HS / RTX 4060  
-  - 16 GB LPDDR5X / 1 TB SSD
+- **ASUS ROG Ally Z2 – Xbox Edition**  
+  - Zen 4c APU  
+  - Radeon 780M iGPU  
+  - Windows 11  
+  - Internal SSD for OS  
+  - External storage supported via USB-C hub  
 
-- **HyperDrive Next 6-Port USB-C Hub** (main dock)
+- **HyperDrive Next 6-Port USB-C Hub**  
+  - HDMI output  
+  - USB-A ports for encoders  
+  - USB-C passthrough (not used)
 
-- **WD Black P10 4 TB external drive** – ROMs + BIOS + media
+- **WD Black P10 4 TB external drive**  
+  - ROMs, BIOS, artwork, media
 
-- **Lifetime LaunchBox + BigBox + EmuMovies licenses**
+- **LaunchBox + BigBox + EmuMovies lifetime licenses**
 
 ---
 
 ## 🧩 Parts You Still Need
 | Part | Purpose | Est. Price |
 |------|----------|-----------:|
-| 12 V mini stereo amplifier (TPA3116 / PAM8610) | Drive speakers | $8–15 |
-| **New 2.0 or 2.1 speakers** (arcade-ready) | Audio upgrade if stock is weak | $20–40 |
-| 12 V DC splitter / adapter cable | Power amp + display | $5 |
-| **Controller hooks or mounts** | Hang gamepads when not in use | $10–20 |
-| **Keyboard / mouse tray or slot** | Easy access for setup | $20–30 |
-| (Optional) 17–19″ 4:3 HDMI monitor | Simplified swap if LVDS fails | $80–120 |
-| (Optional) Custom vinyl artwork | Cabinet refresh | $30–60 |
+| 12 V mini stereo amplifier | If reusing stock speakers | $8–15 |
+| 12 V splitter | Power amp + monitor | $5 |
+| Controller hooks/mounts | Store controllers inside/outside | $10–20 |
+| USB grommet / passthrough | Clean cable routing | $5–10 |
+| (Optional) 4:3 HDMI monitor | Drop-in LCD replacement | $80–120 |
+| (Optional) Vinyl artwork | Deck + sides | $30–60 |
 
 ---
 
 # 🛠️ Parts Purchased
 
 ## 🎮 Controls
-### From ShowtimeArcadeMods
-- **2-Player Joystick & Button Kit – Red & Blue**  
-  - 2 × Sanwa-style joysticks  
-  - 16 × 30 mm buttons (8 per player)  
+- **2-Player Joystick + Button Kit – Red & Blue**  
+  - 2 × joysticks  
+  - 16 × 30 mm buttons (8 per side)  
   - 2 × Zero-Delay USB encoders  
-  - All joystick harnesses  
-  - All button wires for the main 16 buttons  
-  - 2 × USB cables  
+  - Full wiring + USB cables
 
-- **4 × 30 mm Sanwa-replica buttons – White**  
-  - For admin row (Start / Select / Coin / Exit)
+- **4 × 30 mm white admin buttons**  
+  - Start / Select / Coin / Exit
 
-- **2.4 GHz Wireless PS3-Style Controller Kit** (2 controllers + USB dongle)
+- **2.4 GHz PS3-style wireless controller kit**  
+  - 2 controllers + dongle
 
-### From DIY Retro Arcade
-- **Zero-Delay Jumper Wire Pack – 12 wires, 18", 0.110″ (2.8 mm)**  
-  - Required for the 4 extra white buttons  
-  - Long enough for a wide Wave-3 deck  
+- **Zero-Delay jumper wire pack**  
+  - Extra wiring for admin row
 
-- **28–30 mm Button Nut Driver**  
-  - For tightening all 30 mm button nuts cleanly  
+- **28–30 mm button nut driver**
 
 ---
 
 ## 🧩 Control Deck
-### DIY Retro Arcade
-- **2-Player Wave-3 Control Deck for Arcade1Up**  
-  - Birch wood  
-  - **20 × 30 mm button holes**  
-  - 8-button layout per player  
-  - Red T-molding installed  
-  - Plexiglass top included  
-  - Perfect fit for NBA Jam Wave-3 size
+- **Wave-3 2-player deck (DIY Retro Arcade)**  
+  - Birch  
+  - 20 × 30 mm button holes  
+  - 8-button fighter layout  
+  - Red T-molding  
+  - Plexi top
 
 ---
 
 ## 🖥️ Video
-### ShowtimeArcadeMods
-- **LVDS → HDMI LCD Controller Board**  
-  - Supports BOE DV170YGZ-N10 panel  
-  - Inputs: HDMI / VGA / DVI  
-  - Reuses original 12 V Arcade1Up power brick  
-  - Provides audio-out if needed  
+- **LVDS → HDMI driver board**  
+  - Supports BOE DV170YGZ-N10  
+  - HDMI input  
+  - Uses stock 12 V brick
 
 ---
 
 ## 🔊 Audio
-### ShowtimeArcadeMods
-- **13″ USB-Powered Sound Bar**  
-  - Built-in 3.5 mm cable  
-  - USB-powered (no amp needed)
+- **13″ USB-powered sound bar**  
+  - 3.5 mm audio + USB power
 
-### DIY Retro Arcade
-- **Ground Loop Noise Isolator (3.5 mm audio)**  
-  - Prevents hum from USB-powered speakers  
+- **Ground loop noise isolator**
 
 ---
 
 ## 🔌 Power / Wiring / I/O
-### ShowtimeArcadeMods
-- **6-Outlet Power Strip (compact)** — for internal cabinet power  
-- **Dual USB Panel-Mount Extension**  
-  - For external USB device access  
+- Compact 6-outlet power strip  
+- Dual USB panel-mount extension  
 
 ---
 
 # 🔌 Final Cables Needed (Not Purchased Yet)
-These are standard and cheap — you probably have them already:
-
-- **1 × HDMI cable** (Laptop → LCD driver board)  
-- *(Optional)* Short USB cable (hub → laptop)  
-- *(Optional)* Cable grommet for clean pass-through  
+- HDMI cable (ROG Ally → LVDS board)  
+- Short USB-A cables (hub → encoders)  
+- Audio 3.5 mm extension (if needed)  
+- Cable grommet for rear output  
 
 ---
 
 # 🧠 Main System
-- **Laptop:** ASUS ROG Zephyrus G14 (Ryzen 9 8945HS / RTX 4060 / 16 GB LPDDR5X / 1 TB SSD)  
+- **System:** ROG Ally Z2 (Xbox Edition)  
 - **OS:** Windows 11  
 - **Frontend:** LaunchBox + BigBox  
-- **Emulators:** RetroArch, RPCS3, Yuzu, Ryujinx, Dolphin, PCSX2, Cemu, Citra etc.  
-- **External Storage:** WD Black P10 4 TB (ROMs + BIOS + assets)  
-- **Display:** Arcade1Up 17″ LCD via HDMI → LVDS controller  
-- **Audio:** 12 V amp → Arcade1Up speakers  
-- **Power:** Laptop barrel charger + 12 V splitter for amp/display  
+- **Storage:** WD Black P10 (4 TB)  
+- **Display:** HDMI → LVDS → 17″ LCD  
+- **Audio:** Ally 3.5 mm → isolator → USB soundbar  
+- **Controls:** Zero-Delay → USB hub  
 
-### 🔌 Docking & Connectivity
-- **Dock:** HyperDrive Next 6-Port USB-C Hub  
-  - HDMI (4 K @ 30 Hz) → LVDS display  
-  - 2 × USB-A 3.2 → encoders / amp  
-  - USB-C PD input (unused)  
-  - SD / microSD (optional storage)  
-- **Connection:** Single USB-C plug from G14 → hub for arcade mode  
-- **Portability:** Laptop unplugs cleanly; dock stays mounted  
-- **Future-proof:** Hub works with future mini-PC upgrade (USB-C 3.2)
-
-
-## 🧠 System Configuration
-
-### Laptop
-- Windows 11  
-- LaunchBox + BigBox  
-- RetroArch + standalone emulators  
-- External storage on WD Black P10  
-
-### Video Path
-Laptop HDMI → **Showtime LVDS board** → BOE DV170YGZ-N10 LCD
-
-### Audio Path
-Laptop 3.5 mm → **Ground loop isolator** → **USB sound bar**  
-Sound bar USB → Laptop or hub
-
-### Controls
-20 × 30 mm buttons + 2 joysticks → Dual Zero-Delay encoders → Laptop USB
-
-### External USB
-Dual USB panel-mount → Connected internally to encoders or hub
-
-### Controllers
-2x PS3 wireless battery powered controllers plus dongle
+### 🔌 Docking
+- Single USB-C cable from Ally → HyperDrive hub  
+  - HDMI to monitor  
+  - USB-A to encoders  
+  - USB-A to soundbar  
+- Dock stays mounted inside cabinet  
 
 ---
 
 # 🧱 Mounting & Layout
 
 ### Control Deck
-- Buttons installed through plexi  
-- Joysticks mounted underneath  
-- Wires routed cleanly with adhesive clips  
+- 20 buttons through plexi  
+- Joysticks mounted under deck  
+- Zip-tie and clip-based wire routing
 
 ### LCD Driver Board
-- Mounted to rear of monitor or inner panel  
-- Uses original 12 V brick  
+- Mounted behind the LCD  
+- Powered via 12 V brick
 
 ### Sound Bar
-- Option A: Under control deck  
-- Option B: Behind speaker grill  
-- Option C: Sitting on top of cabinet
+- Under deck or behind grill
 
-### Laptop
-- Mounted externally on a small side table or shelf, Velcro?
-- Simple “umbilical”:  
-  - HDMI  
-  - USB  
-  - 3.5 mm  
-- Easily unplug-and-go setup
+### ROG Ally
+- Mounted externally or on a small side shelf  
+- Three-cable umbilical (USB-C → hub only)  
+- Easy to detach and use handheld mode
 
 ### Power Strip
-- Installed on cabinet floor  
-- Powers:  
-  - LCD board (12 V)  
-  - Laptop charger?
-  - Sound bar (if powered from internal USB adapter)
+- Floor of cabinet  
+- Powers: LVDS board, amp (if used), USB charger
 
 ---
 
 # 🔧 Assembly Steps (High Level)
-
-### 1. Control Deck Build
-- Install all 20 buttons  
-- Tighten with nut driver  
-- Install joysticks  
-- Wire all controls → zero-delay boards  
-- Connect encoders → laptop
-
-### 2. Video
-- Install LVDS → HDMI driver board  
-- Connect LVDS ribbon  
-- Connect 12 V power  
-- Run HDMI from laptop to board  
-
-### 3. Audio
-- Mount USB sound bar  
-- Insert noise isolator if needed  
-- Route USB power + 3.5 mm audio
-
-### 4. Internal Layout
-- Mount surge protector  
-- Mount USB panel-port  
-- Route wiring with clips or zip ties  
-
-### 5. Software
-- Input mapping in BigBox  
-- RetroArch per-core config  
-- Admin buttons: Start / Select / Pause / Exit  
-- BigBox startup behavior (auto-launch on Open)  
+1. Install buttons + joysticks  
+2. Wire everything to Zero-Delay boards  
+3. Install LVDS → HDMI controller  
+4. Mount power strip + USB panel ports  
+5. Route HDMI/USB/audio from hub  
+6. Map controls in BigBox + RetroArch  
+7. Configure admin buttons (Pause / Exit)  
 
 ---
 
 # 🧭 Future Mods (Optional)
-- Custom vinyl deck artwork
-- Side art refresh
-- LED halo rings around buttons (30 mm)  
 - Lighted marquee  
-- Mini-PC internal conversion  
-- USB fan for cooling  
-- Rear I/O grommets
-- Internal embedded speakers and amp
-- Real Sanwa buttons / joystick
-- Trays for controllers and accessories
-- Keyboard / Mouse tray
-- Front control deck buttons
-- Ventilation slots and mounted fans
+- Side art or custom deck graphics  
+- LED button halos  
+- Internal cooling fans  
+- Mini-PC internal upgrade later  
+- Hidden keyboard/mouse tray  
 
 ---
 
 # ⭐ Status — November 2025
-- ✔ All required parts **purchased**  
-- ✔ Video solution ready  
-- ✔ Audio solution ready  
-- ✔ Control deck + controls ready  
-- ✔ Power + I/O ready  
-- ➜ Next step: **Assemble controls & test LCD driver**  
+- ✔ All required hardware **purchased**  
+- ✔ ROG Ally chosen as main system  
+- ✔ Control deck + parts ready  
+- ✔ Video + audio path confirmed  
+- ➜ Next: **Assemble control deck + test monitor**
