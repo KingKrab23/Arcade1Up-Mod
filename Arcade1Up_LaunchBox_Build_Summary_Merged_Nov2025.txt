@@ -1,176 +1,280 @@
-# 🕹️ LaunchBox / Arcade1Up Conversion Build Summary  
-### NBA Jam (Model 7754) → 2-Player Conversion (Wave 3)  
-*(ROG Ally Z2 “Xbox Edition” as main system — Updated Nov 2025)*
+# 🕹️ Arcade1Up LaunchBox Build Summary – Desktop PC Version
+### NBA Jam (Model 7754, Wave 3) → 2‑Player Multicade  
+*(Consolidated build summary, updated for desktop PC – Nov 2025)*
+
+This document is a **build summary / BOM + plan**, meant to complement the main `README.md`.  
+It focuses on **parts, concrete wiring decisions, and current project state**, not philosophy.
 
 ---
 
-## ✅ Parts You Already Have
-- **Arcade1Up NBA Jam cabinet (Model 7754)**  
-  - Wave-3 4-player shell  
-  - **BOE DV170YGZ-N10 17″ 4:3 LCD panel**  
-  - Stock speakers (optional to reuse)  
-  - Stock 12 V Arcade1Up power brick  
+## 1. Core Concept (v2 – Desktop PC)
 
-- **ASUS ROG Ally Z2 – Xbox Edition**  
-  - Zen 4c APU  
-  - Radeon 780M iGPU  
-  - Windows 11  
-  - Internal SSD for OS  
-  - External storage supported via USB-C hub  
-
-- **HyperDrive Next 6-Port USB-C Hub**  
-  - HDMI output  
-  - USB-A ports for encoders  
-  - USB-C passthrough (not used)
-
-- **WD Black P10 4 TB external drive**  
-  - ROMs, BIOS, artwork, media
-
-- **LaunchBox + BigBox + EmuMovies lifetime licenses**
+- Convert an **Arcade1Up NBA Jam Wave‑3** 4‑player cab into a **2‑player, 8‑button‑per‑side** multicade.
+- Use a **desktop PC (Ryzen 5 5500 + RX 6500 XT, 16 GB, 1 TB NVMe)** mounted **inside** the cabinet instead of a handheld or laptop.
+- Run **Windows 11 + LaunchBox/BigBox**, using:
+  - Internal SSD for OS + emulators
+  - External 4 TB HDD for ROMs/BIOS/artwork
+- Configure Windows so the cab:
+  - Boots to a **locked‑down Arcade account**
+  - Auto‑launches BigBox in **kiosk mode**
+  - Keeps kids away from system settings
 
 ---
 
-## 🧩 Parts You Still Need
-| Part | Purpose | Est. Price |
-|------|----------|-----------:|
-| 12 V mini stereo amplifier | If reusing stock speakers | $8–15 |
-| 12 V splitter | Power amp + monitor | $5 |
-| Controller hooks/mounts | Store controllers inside/outside | $10–20 |
-| USB grommet / passthrough | Clean cable routing | $5–10 |
-| (Optional) 4:3 HDMI monitor | Drop-in LCD replacement | $80–120 |
-| (Optional) Vinyl artwork | Deck + sides | $30–60 |
+## 2. Hardware Summary
 
----
+### 2.1 Already Owned
 
-# 🛠️ Parts Purchased
+**Cabinet & Display**
+- Arcade1Up NBA Jam (Wave 3, Model 7754)
+- BOE DV170YGZ‑N10 17″ 4:3 LCD
+- Stock 12 V power brick
+- Stock speakers (optional reuse)
 
-## 🎮 Controls
-- **2-Player Joystick + Button Kit – Red & Blue**  
-  - 2 × joysticks  
-  - 16 × 30 mm buttons (8 per side)  
-  - 2 × Zero-Delay USB encoders  
-  - Full wiring + USB cables
+**PC (Inside Cabinet)**
+- Desktop tower with:
+  - AMD Ryzen 5 5500 (6C/12T)
+  - Radeon RX 6500 XT 4 GB
+  - 16 GB DDR4 (XMP 3200–3600 MHz)
+  - 1 TB NVMe SSD
+  - OEM PSU (sufficient for RX 6500 XT)
+  - Windows 11
 
-- **4 × 30 mm white admin buttons**  
-  - Start / Select / Coin / Exit
+**Storage**
+- WD Black P10 4 TB USB HDD (ROMs / BIOS / media)
 
-- **2.4 GHz PS3-style wireless controller kit**  
-  - 2 controllers + dongle
+**Controls**
+- 2‑player joystick + button kit:
+  - 2 × joysticks
+  - 16 × 30 mm buttons (8 per player)
+  - Wiring harnesses
+- 4 × 30 mm white admin buttons
+- 2 × Zero‑Delay USB encoders
+- Extra jumper wire pack
+- 30 mm button nut driver
+- 2 × 2.4 GHz wireless controllers + USB dongle
 
-- **Zero-Delay jumper wire pack**  
-  - Extra wiring for admin row
-
-- **28–30 mm button nut driver**
-
----
-
-## 🧩 Control Deck
-- **Wave-3 2-player deck (DIY Retro Arcade)**  
-  - Birch  
-  - 20 × 30 mm button holes  
-  - 8-button fighter layout  
-  - Red T-molding  
+**Control Deck**
+- Wave‑3 2‑player deck (DIY Retro Arcade or equivalent)
+  - Birch
+  - 20 × 30 mm button holes
+  - 8‑button fighter layout per player
+  - Red T‑molding
   - Plexi top
 
----
+**Video**
+- LVDS → HDMI controller compatible with BOE DV170YGZ‑N10
+  - 12 V DC input (can share original brick via splitter)
+  - HDMI input from GPU
 
-## 🖥️ Video
-- **LVDS → HDMI driver board**  
-  - Supports BOE DV170YGZ-N10  
-  - HDMI input  
-  - Uses stock 12 V brick
+**Audio**
+- USB‑powered sound bar (approx. 13″ wide)
+- Ground loop noise isolator (3.5 mm)
 
----
+**Power / Wiring / Misc**
+- Compact 6‑outlet power strip
+- Panel‑mount USB extension(s)
+- Zip ties and adhesive cable clips
 
-## 🔊 Audio
-- **13″ USB-powered sound bar**  
-  - 3.5 mm audio + USB power
-
-- **Ground loop noise isolator**
-
----
-
-## 🔌 Power / Wiring / I/O
-- Compact 6-outlet power strip  
-- Dual USB panel-mount extension  
+**Software**
+- Windows 11 installed and activated
+- LaunchBox + BigBox license
+- EmuMovies subscription/license
+- Scoop‑based emulator setup script (concept + initial versions)
 
 ---
 
-# 🔌 Final Cables Needed (Not Purchased Yet)
-- HDMI cable (ROG Ally → LVDS board)  
-- Short USB-A cables (hub → encoders)  
-- Audio 3.5 mm extension (if needed)  
-- Cable grommet for rear output  
+### 2.2 Still To Purchase / Optional
+
+| Item | Purpose | Priority |
+|------|---------|----------|
+| 12 V splitter | Share original brick between LVDS + amp | Optional (if amp used) |
+| 12 V mini stereo amp | If reusing stock speakers instead of soundbar | Optional |
+| Rear‑panel fan (120 mm) | Additional airflow for PC | Optional but recommended |
+| Rear “kill switch” or switched power strip | One‑flip power control | Optional |
+| Custom vinyl art / control deck overlay | Cosmetic | Optional |
 
 ---
 
-# 🧠 Main System
-- **System:** ROG Ally Z2 (Xbox Edition)  
-- **OS:** Windows 11  
-- **Frontend:** LaunchBox + BigBox  
-- **Storage:** WD Black P10 (4 TB)  
-- **Display:** HDMI → LVDS → 17″ LCD  
-- **Audio:** Ally 3.5 mm → isolator → USB soundbar  
-- **Controls:** Zero-Delay → USB hub  
+## 3. Physical Layout Plan
 
-### 🔌 Docking
-- Single USB-C cable from Ally → HyperDrive hub  
-  - HDMI to monitor  
-  - USB-A to encoders  
-  - USB-A to soundbar  
-- Dock stays mounted inside cabinet  
+### 3.1 PC & Power
 
----
+- PC tower stands vertically in the **main cavity** above the riser:
+  - Depth: fits within ~22.8″ cabinet depth
+  - Width: well under ~19.75″ internal width
+- Rear of PC faces the back door:
+  - Easy access to HDMI, USB, power
+  - Simple to press power button if needed
 
-# 🧱 Mounting & Layout
+**Power Strip:**
+- Mounted to floor of cabinet
+- Devices plugged in:
+  - Desktop PC
+  - LVDS/HDMI controller
+  - USB soundbar (or 12 V adapter)
+  - Optional 12 V amp
 
-### Control Deck
-- 20 buttons through plexi  
-- Joysticks mounted under deck  
-- Zip-tie and clip-based wire routing
+### 3.2 Video & Audio
 
-### LCD Driver Board
-- Mounted behind the LCD  
-- Powered via 12 V brick
+- GPU HDMI → LVDS controller → stock LCD
+- LVDS controller mounted on rear of LCD frame or side panel
+- PC 3.5 mm out → ground loop isolator → soundbar 3.5 mm in
+- Soundbar USB → power strip (via USB brick) or PC USB
 
-### Sound Bar
-- Under deck or behind grill
+### 3.3 Controls
 
-### ROG Ally
-- Mounted externally or on a small side shelf  
-- Three-cable umbilical (USB-C → hub only)  
-- Easy to detach and use handheld mode
+- 20 × 30 mm holes in deck:
+  - Player 1: 8 buttons + joystick
+  - Player 2: 8 buttons + joystick
+  - Admin row: 4 buttons
+- Each player’s buttons + joystick wired to its own Zero‑Delay encoder
+- Encoders connect via USB‑A cables to PC
+- Wireless controller dongle plugged into rear or front USB (optionally via panel‑mount)
 
-### Power Strip
-- Floor of cabinet  
-- Powers: LVDS board, amp (if used), USB charger
+### 3.4 Cable Management
 
----
-
-# 🔧 Assembly Steps (High Level)
-1. Install buttons + joysticks  
-2. Wire everything to Zero-Delay boards  
-3. Install LVDS → HDMI controller  
-4. Mount power strip + USB panel ports  
-5. Route HDMI/USB/audio from hub  
-6. Map controls in BigBox + RetroArch  
-7. Configure admin buttons (Pause / Exit)  
+- HDMI, USB, and audio cables routed along cabinet sides
+- Secured with adhesive clips and zip ties
+- Keep bundles away from PC intakes/exhaust
 
 ---
 
-# 🧭 Future Mods (Optional)
-- Lighted marquee  
-- Side art or custom deck graphics  
-- LED button halos  
-- Internal cooling fans  
-- Mini-PC internal upgrade later  
-- Hidden keyboard/mouse tray  
+## 4. BIOS & Windows Configuration (Summary)
+
+### 4.1 BIOS
+
+- Load XMP/DOCP to run RAM at rated speed (3200–3600 MHz)
+- Leave CPU at stock (no manual OC)
+- CPPC / “Preferred Cores”: Enabled / Auto
+- Above 4G decoding: Enabled
+- Resizable BAR (SAM): Enabled if available
+- Fast Boot / Ultra Fast: Disabled (to keep USB boot / BIOS access easy)
+
+### 4.2 Windows
+
+**Admin account (you):**
+- Microsoft account sign‑in
+- Full admin rights
+- Used for installation / updates
+
+**Arcade account (kids/guests):**
+- Local standard user
+- Auto‑login enabled
+- BigBox launched on login
+- Limited permissions; cannot install software
+
+**Privacy / Power:**
+- Telemetry reduced to minimal
+- Tailored experiences / ad ID disabled
+- Sleep / hibernation disabled
+- Screen saver off
 
 ---
 
-# ⭐ Status — November 2025
-- ✔ All required hardware **purchased**  
-- ✔ ROG Ally chosen as main system  
-- ✔ Control deck + parts ready  
-- ✔ Video + audio path confirmed  
-- ➜ Next: **Assemble control deck + test monitor**
+## 5. Software Stack & Scoop Script
+
+### 5.1 Directory Layout
+
+**On C:**
+```text
+C:\Emulation\Emulators\   # All emulator folders
+C:\Emulation\Tools\       # Helper tools, scripts
+```
+
+**On External Drive (X:):**
+```text
+X:\LaunchBox\              # LaunchBox + BigBox (optional)
+X:\Emulation\BIOS\        # BIOS per system
+X:\Emulation\Games\       # ROMs, ISOs, etc.
+```
+
+### 5.2 Scoop‑Based Emulator Setup
+
+A **Bash script** (for Git Bash / WSL) manages emulator installs via Scoop:
+
+**Responsibilities:**
+- Ensure Scoop is installed
+- Add buckets (`main`, `extras`, emu‑related bucket)
+- Install emulators:
+  - RetroArch
+  - Dolphin
+  - PCSX2
+  - RPCS3
+  - Xenia (if available)
+  - Ryujinx / Yuzu fork
+  - Citra / Lime3DS
+  - MAME or FBNeo
+  - Supporting CLI tools
+- Relocate or link installed apps into:
+  - `C:\Emulation\Emulators\<Name>`
+- Optionally pin versions
+- Provide clear update commands (e.g., `scoop update`)
+
+This script should live in the repo under `/software/emulator_setup.sh` and be kept in sync with actual emulator choices.
+
+### 5.3 LaunchBox / BigBox Configuration
+
+- Import platforms from `X:\Emulation\Games\<Platform>`
+- Associate each platform with the correct emulator from `C:\Emulation\Emulators\`
+- Configure:
+  - Unified button mappings
+  - Per‑system default cores (for RetroArch)
+  - Per‑system startup/shutdown screens
+- BigBox:
+  - 4:3‑friendly theme
+  - Kiosk mode on
+  - Exit + Options locked with password
+
+---
+
+## 6. Current Status & Next Steps
+
+### 6.1 Current Status (Conceptual)
+
+- ✅ Hardware PC chosen and confirmed to fit inside cabinet footprint
+- ✅ Basic BIOS tuning done (XMP, CPPC, etc.)
+- ✅ Windows 11 installed and updated
+- ✅ LaunchBox/BigBox licensed
+- ✅ External drive designated for ROMs, BIOS, and assets
+- ✅ Arcade vs Admin account model designed
+- ✅ High‑level Scoop script concept defined
+
+### 6.2 Immediate Next Steps
+
+1. **Finalize Windows lockdown**
+   - Create Arcade account
+   - Set auto‑login
+   - Configure BigBox to launch on Arcade login
+2. **Implement Scoop script**
+   - Commit working `emulator_setup.sh` to repo
+   - Test on this PC and confirm emulators land in `C:\Emulation\Emulators\`
+3. **Baseline emulator config**
+   - Drop a few ROMs per system
+   - Confirm at least one game per platform boots from LaunchBox
+4. **Mount PC + route cables in cabinet**
+   - Secure tower
+   - Install power strip
+   - Hook up LVDS, audio, encoders
+
+### 6.3 Medium‑Term Tasks
+
+- Tidy cabinet wiring
+- Tune fan curves and check temperatures in cabinet
+- Add optional rear exhaust fan
+- Capture screenshots for repo docs
+- Add per‑system notes to `/docs/software_notes.md`
+
+### 6.4 Long‑Term / Nice‑to‑Have
+
+- Custom art (side, deck, marquee)
+- LED lighting for marquee or under‑deck
+- GPU upgrade (e.g., RX 6600/6700 XT) if heavier AAA PC gaming becomes a focus
+- Extra tooling:
+  - Backup script for configs and LB/BB data
+  - Sync saves to cloud or NAS
+
+---
+
+This summary is intended as the **single source of truth** for the current desktop‑PC‑based build:  
+what’s bought, how it fits together, how software is structured, and what remains to be done.
