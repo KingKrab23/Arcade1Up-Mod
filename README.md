@@ -1,176 +1,303 @@
-# 🕹️ LaunchBox / Arcade1Up Conversion – High-Level Overview
-### NBA Jam (Wave 3) 4-Player → 2-Player Conversion
+# 🕹️ LaunchBox / Arcade1Up Conversion – Desktop PC Build (v2, Nov 2025)
+### NBA Jam (Wave 3) 4-Player → 2-Player Multicade
 
-This project converts an **Arcade1Up NBA Jam 4-player Wave-3 cabinet** into a **2-player** LaunchBox/BigBox multicade powered by an **ASUS ROG Ally Z2 “Xbox Edition”** as the main PC instead of a traditional laptop.
-This README stays **high-level** and focuses on **structure and design**, not individual SKUs or prices.
+This project converts an **Arcade1Up NBA Jam Wave‑3 cabinet** into a **2‑player, 8‑button‑per‑side** multicade running **Windows 11 + LaunchBox/BigBox** on a **desktop PC (Ryzen 5 5500 + Radeon RX 6500 XT)** mounted inside the cab.
 
-For detailed part numbers, vendors, and pricing, use the dedicated **BOM / build summary** document instead.
-
----
-
-## 1. Project Structure
-
-- **Cabinet Base:**
-  - Arcade1Up NBA Jam (Wave 3, originally 4-player)
-  - Converted to a **2-player, 8-button-per-side** layout
-
-- **Brain of the System:**
-  - **ROG Ally Z2 “Xbox Edition”** as the main PC
-  - Single USB-C dock/hub for video + controls + audio
-
-- **Frontend & Software:**
-  - Windows 11
-  - LaunchBox + BigBox
-  - RetroArch plus selected standalone emulators
+This README is meant to live on GitHub and stay **high‑level and structural**.  
+For exact part SKUs and price tracking, use the separate **build summary / BOM** document.
 
 ---
 
-## 2. Hardware Overview
+## 1. Hardware Overview
 
-### 2.1 Existing / Core Hardware
-- Arcade1Up cabinet with stock 17″ 4:3 LCD
-- ASUS ROG Ally Z2 – Xbox Edition
-- USB-C dock/hub (HyperDrive Next or similar)
-- External HDD for ROMs/BIOS/media
-- Lifetime LaunchBox + BigBox + EmuMovies licenses
+### 1.1 Cabinet & Display
+- **Cabinet:** Arcade1Up NBA Jam (Wave 3, originally 4‑player)
+- **Conversion:** 2‑player layout, 8 action buttons per player
+- **Monitor:** Stock 17″ 4:3 BOE DV170YGZ‑N10 LCD
+- **Driver:** LVDS → HDMI controller board powered from the original 12 V brick
 
-### 2.2 Control System
-- 2-player joystick + button setup
-- Dual USB encoders
-- Admin buttons: Start / Select / Coin / Exit
-- Wave-3 compatible 2-player deck with plexi top
+### 1.2 Main System – Desktop PC (Inside Cabinet)
+- **Form factor:** ATX/mid‑tower desktop mounted in lower cavity above riser
+- **CPU:** AMD Ryzen 5 5500 (6C/12T)
+- **GPU:** AMD Radeon RX 6500 XT 4 GB
+- **RAM:** 16 GB DDR4 (XMP 3200–3600 MHz enabled in BIOS)
+- **Storage (internal):** 1 TB PCIe NVMe SSD for Windows + core software
+- **Storage (external):** WD Black P10 4 TB USB HDD for ROMs / BIOS / media
+- **OS:** Windows 11 Home
+- **Use cases:**
+  - Retro emulation (8‑bit → PS3 / X360 / Switch where feasible)
+  - BigBox frontend
+  - PC Gaming as available
 
-### 2.3 Video & Audio
-- LVDS → HDMI controller for stock monitor
-- USB/amp-powered speakers or soundbar
-- Noise isolator if needed
+### 1.3 Controls
+- 2 × arcade joysticks (8‑way)
+- 16 × 30 mm action buttons (8 per player)
+- 4 × 30 mm admin buttons (Start, Select, Coin, Exit – configurable)
+- 2 × Zero‑Delay USB encoders (one per player)
+- 2 × 2.4 GHz wireless “PS3‑style” gamepads + USB dongle (optional couch play)
 
-### 2.4 Power & I/O
-- Internal power strip
-- 12 V brick reused for monitor and/or amp
-- Panel-mount USB extensions for easy access
+### 1.4 Audio
+- USB‑powered soundbar mounted under the marquee or control deck
+- 3.5 mm audio from PC → ground‑loop isolator → soundbar
+- Optionally, stock A1Up speakers + small 12 V stereo amp
 
----
-
-## 3. High-Level System Architecture
-
-### 3.1 Data & Compute
-- **ROG Ally Z2** runs:
-  - Windows 11
-  - LaunchBox + BigBox
-  - RetroArch and standalone emulators
-- **External drive** stores:
-  - `LaunchBox`
-  - `Emulation\BIOS`
-  - `Emulation\Games\<Platform>`
-
-### 3.2 Video Path
-ROG Ally USB-C → USB-C dock → HDMI → LVDS controller → Stock 4:3 LCD
-
-### 3.3 Audio Path
-ROG Ally 3.5 mm (or USB audio) → (optional isolator) → speakers/soundbar  
-Speakers powered via USB or internal power strip
-
-### 3.4 Controls Path
-Control deck → dual USB encoders → dock → ROG Ally  
-Optional wireless controllers via USB dongle on dock
-
-### 3.5 External I/O
-Panel-mount USB ports → dock/encoders  
-Allows connection of controllers, keyboard/mouse, USB sticks
+### 1.5 Power & Wiring
+- Internal 6‑outlet surge strip mounted on cabinet floor:
+  - Desktop PC
+  - LVDS/HDMI board
+  - USB soundbar and/or 12 V amp
+- Existing 12 V Arcade1Up brick reused for monitor (and amp via splitter if used)
+- Optional rear “master kill switch” on power strip or inline
 
 ---
 
-## 4. Cabinet Layout & Mounting (Conceptual)
+## 2. System Architecture
 
-### 4.1 Control Deck
-- 8 main buttons per player
-- Joysticks mirrored
-- Admin button row
-- Cleanly routed wiring with zip ties and adhesive clips
+### 2.1 User Accounts & Security
+Two Windows accounts:
 
-### 4.2 Internal Layout
-- LVDS controller near the monitor
-- Dock on a side panel for short cable runs
-- Power strip on cabinet floor
-- Cable management with clips/zip ties
+1. **Admin account (you)**
+   - Microsoft account sign‑in allowed
+   - Only administrator on the box
+   - Used for:
+     - Installing software
+     - Updating emulators
+     - Changing system settings
 
-### 4.3 ROG Ally Placement (Options)
-- Mounted **outside** on a side bracket/stand (primary plan)
-- OR on a small shelf/tray next to the cabinet with a single USB-C “umbilical”
-- Easy to disconnect and use independently as a handheld
+2. **Arcade account (kids / guests)**
+   - Local standard user (no Microsoft sign‑in)
+   - Auto‑login enabled
+   - BigBox launched at sign‑in and locked in **kiosk mode**
+   - Cannot install apps or change system settings without admin password
 
----
+General rules:
+- **UAC ON** and at default level
+- Kids use **only** the Arcade account
+- Exiting BigBox or opening BigBox options requires a password
 
-## 🧱 Mounting & Ventilation
+### 2.2 Directory Layout
 
-### ROG Ally
-- Cradle or stand on cabinet side or nearby surface
-- Vents kept clear (no sealed box)
-- USB-C cable routed cleanly to dock
-- Optional Velcro strap, lip, or stopper to prevent falls
+The goal is to keep **emulators on C:** (fast SSD) and **ROMs/media on the external drive**.
 
-### Dock
-- Mounted with Velcro/3M strips inside cabinet
-- Short HDMI + USB runs to monitor, encoders, and audio
-- Cable clips for clean routing
-- Optional small USB fan if cabinet runs hot
-
-### Power
-- ROG Ally charger plugged into internal or nearby power strip
-- Amp + display can share 12 V brick via splitter
-- Inline fuse or rear kill-switch recommended for safety
-
----
-
-## 5. Software Layout & Behavior
-
-### 5.1 Directory Layout
+**Internal SSD:**
 ```text
-E:\LaunchBox\
- ├─ Emulators\
- │   └─ RetroArch\
- ├─ Emulation\
- │   ├─ BIOS\
- │   └─ Games\<Platform>\
+C:\Emulation\
+ ├─ Emulators\          # All emulator binaries/tools
+ │   ├─ RetroArch\
+ │   ├─ Dolphin\
+ │   ├─ PCSX2\
+ │   ├─ RPCS3\
+ │   ├─ Xenia\
+ │   ├─ Ryujinx\
+ │   └─ ... (others)
+ ├─ Tools\              # Supporting tools, scripts, configs
+ └─ Config\             # Centralized configs if desired
 ```
 
-### 5.2 Frontend Behavior
-- BigBox boots directly into arcade mode
-- Arcade-optimized theme
-- Unified input mapping across all platforms
-- Admin buttons mapped to Pause / Menu / Exit
-
-### 5.3 Input Mapping
-- Standardized 8-button layout for fighters
-- Consistent Start/Select per system
-- Admin buttons mapped globally
-
----
-
-## ⚙️ Software Setup Summary
-- Install LaunchBox + BigBox on the external drive used by the ROG Ally
-- Configure RetroArch and standalone emulators
-- Map controls to match the physical deck layout
-- Configure BigBox to auto-launch at Windows login on the Ally
-
----
-
-## 📂 Repository Structure
+**External HDD (fixed drive letter, e.g. X:):**
 ```text
-/docs               → diagrams, mounting plans
-/hardware           → specs, wiring notes, BOM
-/software           → configs, emulator presets
-/assets             → marquee, artwork, theme files
-README.md           → this document
+X:\LaunchBox\          # Frontend (can live here or on C:)
+X:\Emulation\
+ ├─ BIOS\               # Per‑system BIOS
+ └─ Games\
+     ├─ NES\
+     ├─ SNES\
+     ├─ N64\
+     ├─ PS2\
+     ├─ PS3\
+     ├─ Switch\
+     ├─ MAME\
+     └─ ...
 ```
 
+Windows Disk Management should be used to **pin the external drive letter** so LaunchBox paths don’t break.
+
+### 2.3 Frontend & Emulators
+
+**Frontend:**
+- LaunchBox for configuration
+- BigBox for cabinet mode (4:3 theme, kiosk mode, controller‑friendly)
+
+**Core emulators (not exhaustive):**
+- RetroArch (NES, SNES, GB/GBC/GBA, PS1, etc.)
+- DuckStation (alt PS1)
+- Dolphin (GameCube/Wii)
+- PCSX2 (PS2)
+- RPCS3 (PS3)
+- Xenia (Xbox 360)
+- Ryujinx / Yuzu forks (Switch)
+- Citra / Lime3DS (3DS)
+- MAME (arcade)
+- Others as needed
+
 ---
 
-## 6. Build Phases (High Level)
+## 3. Software Install Automation (Scoop Script)
 
-1. **Control Deck Prep** – Install controls, wire to encoders
-2. **Video & Audio** – Install LVDS board and speakers/soundbar
-3. **Internal Wiring** – Mount dock, power strip, and route cables
-4. **Software Setup** – Configure LaunchBox/BigBox on ROG Ally, map controls
-5. **Polish** – Cable management, optional artwork/cooling
+A **Scoop‑based setup script** is used to install and update emulators on Windows in a repeatable way.
+
+### 3.1 Script Concept
+
+- Lives in this repo under something like:
+  ```text
+  /software/emulator_setup.sh
+  ```
+- Intended to be run from **Git Bash** or WSL on Windows.
+- Uses **Scoop** to:
+  - Add the emulation bucket(s)
+  - Install emulators into `C:\Emulation\Emulators\`
+  - Optionally pin versions for stability
+  - Provide update commands
+
+### 3.2 High‑Level Behavior (Pseudo‑Spec)
+
+SEE: https://github.com/KingKrab23/scoop-install-emulators for a sibling repo that will handle the below
+
+1. Ensure **Scoop** is installed (or install it).
+2. Add any required buckets:
+   - `main`, `extras`, and an emulation bucket if used.
+3. Install or update packages such as:
+   - `retroarch`
+   - `dolphin`
+   - `pcsx2`
+   - `rpcs3`
+   - `xenia-canary` (if available)
+   - `ryujinx`
+   - `citra-emu` / `lime3ds`
+   - Supporting tools (7-Zip, Notepad++, etc.).
+4. Move/copy the installed folders to:
+   - `C:\Emulation\Emulators\<EmulatorName>`
+5. Print a summary of:
+   - What was installed
+   - Where it lives
+   - How to run `scoop update` / `scoop update <pkg>`
+
+> The README doesn’t duplicate the entire script; the script itself should be authoritative.  
+> This section simply documents its existence, purpose, and directory assumptions.
+
+---
+
+## 4. Cabinet Layout & Mounting
+
+### 4.1 PC Placement
+
+- Tower stands vertically in the **main lower cavity above the riser**.
+- Constraints:
+  - Internal width ~19.75″
+  - Depth ~22.8″ (PC depth ~17–18″ is fine)
+- Rear of PC faces the **cabinet’s rear service door** for:
+  - Access to HDMI, USB ports, and power
+  - Pressing the power button if needed
+
+### 4.2 Cooling & Ventilation
+
+- Leave space behind and above the PC for intake/exhaust.
+- Options:
+  - Add a **120 mm exhaust fan** on the rear panel
+  - Add vent holes under the control deck if temps are high
+- Keep cable bundles away from PC intake/exhaust fans.
+
+### 4.3 Controls & Wiring
+
+- Control deck:
+  - 20 × 30 mm holes (16 player buttons + 4 admin)
+  - 2 joysticks underneath, centered on player positions
+- Wiring:
+  - Each button → Zero‑Delay encoder input
+  - Encoders → USB‑A ports on PC
+  - Cables bundled with zip ties and adhesive clips along side panels
+
+### 4.4 Video & Audio Wiring
+
+- **Video:**
+  - GPU HDMI → LVDS controller HDMI input
+  - LVDS board → LCD via stock ribbon cable
+- **Audio:**
+  - PC 3.5 mm → ground loop isolator → soundbar 3.5 mm input
+  - Soundbar USB → cabinet power strip (or PC USB)
+
+---
+
+## 5. Windows & BigBox Behavior
+
+### 5.1 Windows Configuration (Arcade Account)
+
+- Auto‑login to Arcade user
+- Disable:
+  - Screen saver
+  - Sleep / hibernate
+  - Lock screen timeout (or set very high)
+- Privacy:
+  - Turn off extra telemetry, tailored ads, and unnecessary app permissions
+
+### 5.2 BigBox Configuration
+
+- Theme optimized for **4:3** (no ultrawide UI elements)
+- Kiosk mode enabled:
+  - Exit and Options require password
+- Startup:
+  - BigBox launched on Arcade login (Startup folder or Task Scheduler)
+- Shutdown flow:
+  - Admin can trigger system shutdown from BigBox menu
+  - Or use a mapped admin combo/button to exit BigBox when needed
+
+---
+
+## 6. Build Phases & Current Status
+
+### Phase 1 – Planning & Parts (Done)
+- Cabinet acquired
+- Core PC selected and tested
+- Controls and encoders purchased
+- LVDS controller and audio solution chosen
+
+### Phase 2 – PC Setup (In Progress)
+- BIOS configured (XMP, CPPC, sensible fan curves)
+- Windows 11 installed and updated
+- Drivers: AMD chipset + Radeon Adrenalin + audio/LAN
+- Admin + Arcade accounts created
+- Privacy settings tuned
+
+### Phase 3 – Software Stack (In Progress)
+- Scoop script defined and iterated on
+- LaunchBox/BigBox installed and activated
+- Emulators installed to `C:\Emulation\Emulators\`
+- ROMs and BIOS organized on `X:` external drive
+- One “test game” verified per major system
+
+### Phase 4 – Cabinet Integration (Upcoming)
+- Control deck fully wired and tested
+- LVDS controller mounted and configured
+- PC mounted, power strip installed
+- HDMI/USB/audio routed and tied down
+
+### Phase 5 – Polish & Extras (Future)
+- Artwork / vinyl
+- Cooling fan(s) and noise tuning
+- Optional GPU upgrade (e.g., RX 6600 / 6700 XT) if needed for heavier PC gaming
+- Additional QoL scripts (backup configs, sync save data, etc.)
+
+---
+
+## 7. Repository Structure (Suggested)
+
+```text
+/README.md                              # This document
+/docs/
+  ├─ cabinet_layout.md                  # Mounting diagrams, measurements
+  ├─ wiring_diagram.md                  # Control + power wiring
+  └─ software_notes.md                  # Emulator quirks, per‑system notes
+/hardware/
+  ├─ bom_summary.md                     # Human‑readable BOM (no prices)
+  └─ panel_specs.md                     # Monitor & control panel specs
+/software/
+  ├─ emulator_setup.sh                  # Scoop‑based installer script
+  ├─ bigbox_profile/                    # Themes, settings backups
+  └─ configs/                           # Example config files
+/assets/
+  ├─ marquee/                           # Artwork
+  └─ control_deck/                      # Deck art, button layout templates
+```
+
+This README should stay **evergreen** as the top‑level orientation for the project.  
+Details (script flags, exact emulators, theme choices) should be documented in the `/software` and `/docs` sub‑files as they evolve.
